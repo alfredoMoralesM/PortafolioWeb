@@ -1,0 +1,58 @@
+<!doctype>
+<html>
+<head>
+	<title>jsPDF</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />	
+
+	<script type="text/javascript" src="js/jquery/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery/jquery-ui-1.8.17.custom.min.js"></script>
+	<script type="text/javascript" src="jspdf.js"></script>
+
+	<script type="text/javascript" src="jspdf.plugin.addimage.js"></script>
+
+	<script type="text/javascript" src="jspdf.plugin.standard_fonts_metrics.js"></script>
+	<script type="text/javascript" src="jspdf.plugin.split_text_to_size.js"></script>
+	<script type="text/javascript" src="jspdf.plugin.from_html.js"></script>
+
+</head>
+
+<body>
+<iframe frameborder="0" width="500" height="400"></iframe>
+<script>
+$(document).ready(function() { //hacer llamada a la funcion
+
+
+//llamada a funciones sumarizada todo este codigo representa todo lo que contiene el pdf cada punto/rgb/posicion codificado
+
+
+var doc = new jsPDF(); //constructor que prepara un nuevo objeto nombrado como doc en memoria ese objeto se apropia de todas las funciones pdf
+var dato1= 20;
+var dato2= 50;
+var suma= dato1 + dato2;
+var texto= "";
+
+texto= "El resultado de suma "+ dato1+ " y " + dato2 + " es: " + suma;
+
+
+
+//todo esto está en memoria
+doc.setFontSize(20); //en ppi puntos por pulgada 
+doc.text(40, 20, "Christian Alfredo Morales Meza"); //texto en posicion x=40, y=20
+doc.text(40, 40, "Programación Web 1");
+doc.text(40, 60, texto);
+//doc.addImage(imgData, 'JPEG', 10, 40, 180, 180); 
+//agregar la imagen encriptada x1, y1, x2, y2
+
+
+//todo lo que está en memoria se monta en una cadena
+var string = doc.output('datauristring');  //
+
+//al iframe del dom cambiarle el atributo  src a string que es donde se guardo todo lo que está en memoria 
+$('iframe').attr('src', string);
+
+});
+</script>
+
+</body>
+</html>

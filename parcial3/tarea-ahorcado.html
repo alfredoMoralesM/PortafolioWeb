@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahorcado</title>
+
+</head>
+<body>
+    <p><button onclick="dibujarMonito()">Dibujar</button></p>
+    <p><button onclick="limpiarCanvas()">Limpiar</button></p>
+    
+    <canvas id="myCanvas" width="600" height="800" style="border:1px solid #000000;">
+
+    </canvas>
+
+    <script>
+        //6 oportunidades
+        //Cada programador definirá su palabra secreta por ejemplo "murcielago" dara 6 oportunidades al usuario dando piestas para introducir palabra el juego termina ciando el usuario adivina o se acaban los intentos
+        
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+
+
+        function dibujarLineas(xInicio,yInicio,xFinal,yFinal){
+            ctx.beginPath();
+            ctx.moveTo(xInicio, yInicio);
+            ctx.lineTo(xFinal, yFinal);
+            ctx.stroke();
+        }
+
+        function dibujarCabeza(xInicio,yInicio,radio){
+            ctx.beginPath();
+            ctx.arc(xInicio, yInicio,radio , 0, 2 * Math.PI);
+            ctx.stroke();
+        }
+        
+        function dibujarMonito(){
+            dibujarCabeza(300,80,60);
+            dibujarLineas(300,140, 300, 400);
+            dibujarLineas(300,200, 160, 140);
+            dibujarLineas(300,200, 440, 140);
+            dibujarLineas(300,400, 160, 500);
+            dibujarLineas(300,400, 440, 500);
+            return true;
+        }
+
+        function limpiarCanvas() {
+            let c = document.getElementById("myCanvas");
+            let ctx = c.getContext("2d");
+            ctx.fillStyle= "white";
+            ctx.fillRect(0,0,600,800);
+            return true;
+        }
+        
+    </script>
+
+
+</body>
+</html>
