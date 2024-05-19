@@ -14,9 +14,14 @@ body{
 
 header{
     width: 100%;
-    padding: 30px 100px; /*arriba/abajo   y   derecha/izquierda en relacion con la ventana*/
+    padding: 10px 100px; /*arriba/abajo   y   derecha/izquierda en relacion con la ventana*/
     display:flex; /*especifica si un elemento es tratado como block or inline element. dimensiones flexibles en un eje*/
     justify-content: space-between; /*Esta propiedad define la alineación de los ítems a lo largo del eje principal. Ayuda a distribuir el espacio libre que queda en el contenedor, ya sea que todos los flex ítems de una línea sean inflexibles o flexibles, pero ya hayan alcanzado su tamaño máximo. También ejerce cierto control sobre la alineación de los ítems cuando sobrepasan el límite de la línea.*/
+    position: fixed;
+    flex-wrap: wrap;
+    z-index: 2;
+    background-color: grey;
+    border-radius: 0 0 10px 10px;
 }
 
 header .logo{ /*debe ir un espacio despues de la etiqueta padre*/
@@ -24,6 +29,13 @@ header .logo{ /*debe ir un espacio despues de la etiqueta padre*/
     text-decoration: none;
     font-size: 2em;
     color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.present{
+    display: flex;
 }
 
 header ul{
@@ -49,21 +61,24 @@ header ul li a:hover, header ul li a.activo {
     color: white;
 }
 
-section{
-    justify-content: space-around;
-    width: 100%;
-    display:flex;
-    align-items: center;
+.inicio{
+    padding-top: 150px;
+    padding-left: 100px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 20%; 
+    align-items: center;   
 }
 
-section img{
-    height: 100%;
-    width: 50%;
-    mix-blend-mode: screen; /*establece cómo el contenido de un elemento debe combinarse con el contenido del elemento principal y el fondo del elemento*/
+.img-present{
+    mix-blend-mode: screen;
+    filter: brightness(80%);
+    height: 500px;
+    width: 500px;
 }
 
 #presentacion{
-    background-color: hwb(260 9% 22%);
+    background-color: hwb(260 9% 22% / 0.186);
     border-radius: 20px;
     border: #000000ff 5px solid;
     padding: 15px 10px;
@@ -72,6 +87,7 @@ section img{
     box-shadow: 0px 0px 10px 15px #440A67;
     animation: letrero 1.5s linear infinite;
     animation-direction: alternate-reverse; 
+    max-width: 400px;
 }
 
 .parciales{
@@ -146,7 +162,8 @@ section img{
     padding: 30px;
     width: 400px;
     height: 100%;
-    border: solid 2px rgb(0, 240, 0);
+    border: solid 4px rgb(6, 2, 134);
+    border-style: dashed;
     border-radius: 25px;
     transition: all 1s;
 }
@@ -170,7 +187,8 @@ section img{
     padding: 30px;
     width: 400px;
     height: 100%;
-    border: solid 2px rgb(0, 240, 0);
+    border: solid 4px rgb(0, 240, 0);
+    border-style: dashed;  
     border-radius: 25px;
     transition: all 0.5s;
 }
@@ -182,7 +200,32 @@ section img{
     color: black;
 }
 
-.dibujo1, .dibujo2{
+.actividadp3{
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: center;
+    margin: 10px;
+    padding: 30px;
+    width: 400px;
+    height: 100%;
+    border: solid 4px rgb(250, 247, 250);
+    border-style: dashed; 
+    border-radius: 25px;
+    transition: all 1s;
+}
+
+.actividadp3:hover {
+    box-shadow: 0px 0px 5px 5px white;
+    background-color: #000000;
+    background-image: url(stars-7249785_1280.jpg);
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    color: black;
+}
+
+
+.dibujo1, .dibujo2, .dibujo3{
     margin: 15px;
     display: inline-block;
     justify-content: center;
@@ -208,6 +251,16 @@ section img{
     animation: cohete 0.06s alternate-reverse infinite;
 }
 
+.dibujo3:hover{
+    margin: 15px;
+    display: inline-block;
+    justify-content: center;
+    width: 50%;
+    height: 200px;
+    animation: astro 3s alternate-reverse infinite;
+}
+
+
 @keyframes alien { /*se puede poner tiempo o en porcentaje */
     from{
         transform: rotate(0deg);
@@ -226,4 +279,22 @@ section img{
     to{
         transform: rotate(5deg);
     }
+}
+
+@keyframes astro { /*se puede poner tiempo o en porcentaje */
+    from{
+        transform: rotate(0deg);
+    }
+
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+@media screen and (max-width: 960px){
+    .inicio{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+
 }

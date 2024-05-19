@@ -1,0 +1,227 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Morales Meza Christian Alfredo. Examen Práctico 2</title>
+
+  <style>
+    @font-face {
+      font-family: 'Mono';
+      src: url(fonts/Monoton-Regular.ttf);
+    }
+
+    @font-face {
+      font-family: 'Mani';
+      src: url(fonts/MadimiOne-Regular.ttf);
+    }
+
+    body{
+      background-image: url(matrix.png);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+
+    div.negro{
+      position: relative;
+      height: 100%;
+      width: 65vw;
+      background-color: black;
+      color: white;
+    }
+
+    div.juego{
+      border-top-right-radius: 15px;
+      position: relative;
+      border: 2px solid white;
+      margin: 20px 50px;
+      text-align: justify;
+    }
+
+    div.titulo{
+      font-family: 'Mani';
+      border-top-right-radius: 13px;
+      width: 100%;
+      height: auto;
+      background-color: rgb(7, 211, 7);
+      color: white;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      font-weight: bold;  
+    }
+
+    div.texto{
+      padding: 10px 10px;
+    }
+
+    div.imagen{
+      padding: 2px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      border: 2px solid rgb(1, 223, 1);
+      margin: 10px;
+      background-color: white;
+    }
+    .amarillo{
+      color:yellow;
+    }
+
+    .rojo{
+      color:red;
+    }
+
+    .fecha{
+      color: rgb(3, 175, 3);
+    }
+
+    div.lados{
+      display: flex;
+      position: relative;
+      background-color: black;
+      width: 10vw;
+      height: auto;
+      justify-content: center;
+      align-items: top;
+    }
+
+    .principal-padre{
+      display: flex;
+      width: 100%;
+      justify-content: center;
+    }
+
+    .principal-hijo{
+      display: inline-block;
+      font-family: 'Mono';
+      font-size: 30px;
+      color: rgb(8, 200, 8);
+      border-bottom: 0.1px solid green;
+      text-decoration: underline 0.1px solid;
+      text-underline-offset: 5px;
+      letter-spacing: 10px;
+    }
+
+    .espacio{
+      padding-left: 10px;
+    }
+
+    div.logo{
+      width: 100px;
+      display: inline-block;
+      margin: 10px;
+      background-color: white;
+      height: 100px;
+    }
+
+    .ultimo{
+      border-top: solid 2px rgb(5, 196, 5);
+      border-bottom: solid 2px rgb(5, 196, 5);
+      position: relative;
+      margin: 20px 50px;
+      text-align: justify;
+    }
+
+    .navegacion{
+      border-top: solid 1px rgb(5, 184, 5);
+      color: rgb(6, 178, 6);
+      margin: 10px 50px;
+      margin-bottom: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    a{
+      text-decoration: none;
+      color: rgb(3, 198, 3);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="lados">
+    <div class="logo">
+      <img src="atari-logo.svg" width="100px" height="100px">
+    </div>    
+  </div>
+  
+  <div class="negro">
+
+    <div class="principal-padre"><di class="principal-hijo">Videojuegos clásicos</di></div>
+
+    <div class="navegacion">
+      <a href="#pong"><p style="font-size: 30px;">&#x1F3D3 -</p></a>
+      <a href="#space"><p style="font-size: 30px;">&#x1F47E -</p></a>
+      <a href="#pacman"><p style="font-size: 30px;">&#x1F47B</p></a>
+    </div>
+
+    <div id= "pong" class="juego">
+
+        <div class="titulo"><span class="espacio">Pong</span> </div>
+
+        <div class="imagen" style="float: right;"><img src="pong.png" width="100%" height="150px"></div>
+
+        <div class="texto">
+        <span class="amarillo">Pong</span> (o Tele-Pong) fue un videojuego de la primera generación de videoconsolas publicado por Atari, creado por <span class="rojo">Nolan Bushnell</span> y lanzado el <span class="fecha">29 de noviembre de 1972</span>. 
+        Pong está basado en el deporte de tenis de mesa (o ping pong).
+        <br><br> <span class="amarillo">Pong</span> es un juego de deportes en dos dimensiones que simula un tenis de mesa. El jugador controla en el juego una paleta 
+        moviéndola verticalmente en la parte izquierda de la pantalla, y puede competir tanto contra un oponente controlado por computadora, como con otro jugador humano que controla una segunda paleta en la parte opuesta. Los jugadores pueden usar las paletas para pegarle a la pelota hacia un lado u otro. El objetivo consiste en que uno de los jugadores consiga más puntos que el oponente al finalizar el juego. Estos puntos se obtienen cuando el jugador adversario falla al devolver la pelota.
+        <br><br>La palabra Pong es una marca registrada por Atari Interactive, mientras que la palabra genérica "pong" es usada para describir el género de videojuegos. La popularidad de Pong dio lugar a una demanda de infracción de patentes, ganada por parte de los fabricantes de Magnavox Odyssey, que poseía un juego similar.
+        
+        </div>
+        
+      </div>
+
+    <div id="space" class="juego">
+    
+      <div class="titulo"><span class="espacio">Space Invaders</span></div>
+
+      <div class="imagen" style="float: left;"><img src="space-invaders.png" width="150px" height="200px"></div>
+
+      <div class="texto">
+        
+        <span class="amarillo">Space Invaders</span> es un videojuego de arcade diseñado por <span class="rojo">Toshihiro Nishikado</span> y lanzado al mercado en <span class="fecha">1978</span>. Su objetivo es eliminar oleadas de alienígenas con un cañón láser y obtener la mayor cantidad de puntos posible.
+
+        <br><br>El juego tiene una estructura muy simple pero apasionante. El jugador controla un cañón que puede moverse a la derecha o izquierda y un botón de disparo. Tiene que ir destruyendo los aliens invasores (de los cuales hay tres tipos: con forma de calamar, de cangrejo y de pulpo) que van acercándose a la tierra cada vez más rápidamente. Cada cierto tiempo aparece en la pantalla, por encima de los invasores, un platillo volador que se mueve aleatoriamente de derecha a izquierda o de izquierda a derecha y que no agrega una puntuación definida, sino que los puntos que otorga cambian cada vez.
+
+        <br><br>Además se tienen cuatros escudos de protección terrestre (más parecidos a búnkeres) que cubren al jugador del fuego alienígena, aunque también le dificultan disparar desde detrás de ellos.
+
+        <br><br>Para tener éxito en el juego se deben eliminar primero los invasores más próximos a ambos lados del monitor, para ralentizar su avance.
+      </div>
+    
+    </div>
+
+    <div id= "pacman" class="juego">
+    
+      <div class="titulo"><span class="espacio">Pac-Man</span></div>
+
+      <div class="imagen" style="float: right;"><img src="pac-man.png" width="150px" height="200px"></div>
+
+      <div class="texto">
+        
+        <span class="amarillo">Pac-Man</span>, llamado <span class="amarillo">Comecocos</span> en España, es un videojuego arcade creado por el diseñador de videojuegos <span class="rojo">Toru Iwatani</span> de la empresa Namco y lanzado el <span class="fecha">21 de mayo de 1980</span>. Se convirtió en un fenómeno mundial en la industria de los videojuegos, llegó a tener el Récord Guiness del videojuego de arcade más exitoso de todos los tiempos con un total de 293.822 máquinas vendidas de 1981 a 1987 y acabó con el dominio de Space Invaders.
+
+        <br><br>El protagonista del videojuego Pac-Man es un círculo amarillo al que le falta un sector que representa una boca. Aparece en laberintos donde debe comer puntos pequeños, puntos mayores y otros premios con forma de frutas y otros objetos. El objetivo del personaje es comer todos los puntos de la pantalla, momento en el que se pasa al siguiente nivel o pantalla. Sin embargo, cuatro fantasmas o monstruos, Shadow (Blinky), Speedy (Pinky), Bashful (Inky) y Pokey (Clyde), recorren el laberinto para intentar comerse a Pac-Man. Estos fantasmas son, respectivamente, de colores rojo, rosa, cyan y naranja.
+
+        <br><br>Hay cuatro puntos más grandes de lo normal situados cerca de las esquinas del laberinto que proporcionan a Pac-Man la habilidad temporal de comerse a los monstruos (todos ellos se vuelven azules mientras Pac-Man mantiene ese poder). Después de haber sido tragados, los fantasmas se regeneran en "casa" (una caja situada en el centro del laberinto).
+
+        
+      </div>
+
+    </div>
+
+    <div class=" ultimo">
+    Última modificación de esta página: 23 de junio de 2023<br>
+
+    Basado en textos de la Wikipedia
+    </div>
+
+  </div>
+
+  <div class="lados"></div>
+</body>
+</html>

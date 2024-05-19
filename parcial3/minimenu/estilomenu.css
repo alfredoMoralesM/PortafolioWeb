@@ -1,4 +1,8 @@
-h1{
+.custom-bg{
+  background-color: #414D68;
+}
+
+.title{
   text-align: center; 
   font-family: Comic Sans MS; 
   font-weight:bold; 
@@ -13,6 +17,7 @@ h1{
   text-decoration:underline  wavy  rgb(230, 234, 3);
   font-size: 20px;
   text-transform: uppercase;
+  color: white;
 }
 
 #demo{
@@ -20,7 +25,6 @@ h1{
   margin: 100px;
   text-align: center;
 }
-
 
 a{
   background-color: hwb(0 0% 100%);
@@ -116,3 +120,29 @@ button.semana1 {
   button.semana4:active {
     background-color: rgb(161, 163, 16);
   }
+
+  #semana1{
+    background-color: #3e8e41;
+    color: white;
+  }
+
+  #semana2{
+    background-color:  #4176c1;
+    color: white;
+  }
+
+  #semana3{
+   background-color:  #a52bdd;
+   color: white;
+  }
+
+  #semana4{
+    background-color: #d1d40f;
+    color: white;
+  }
+
+  .links{
+    text-decoration: none;
+    color: white;
+  }
+
